@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+
+.element-selector p{ /* 서울에 있는 홍길동만 찾아주세요*/
+ background-color: yellow; 
+
+}   
+
+.pink{
+    color: pink;
+}
+
+.element-selector-brief{
+    color: skyblue;
+}
+
+
+
+/*
+
+{
+    background-color: lime;
+display: block;
+
+}*/

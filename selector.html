@@ -1,0 +1,50 @@
+<!-- 문서 타입 정의, 모든 html 문서의 첫줄.
+                                            현재 html은 총 세 가지 버전. html 4.1, xhtml 1.0, html5가 있다.
+                                            html 이후 넘버링이 없다면 체신기술이라는 말. -->
+
+<!-- //element - 태그의 시작부터 종료까지를 이르는 말.
+                                            html 사이에는 head와 body가 존재. parent node / siblings node> -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <!--empty element - 클로징 태그가 없음  -->
+    <!--content-type = 한글/영어 인코딩 값을 utf-8 타입으로 선언하는 구문.-->
+    <meta charset="utf-8" />
+    <!-- 12라인과 14라인은 같은 코드-->
+    <title>css 선택자 학습하기</title>
+    <!--   //타이틀 설정-->
+    <link rel="stylesheet" href="./CSS/selector.css" />
+  </head>
+  <!--컴파일 언어 / 인터프리터 언어 -->
+  <!--(컴파일 = 코드를 통해 결과 확인, 인터프리터  = 타 앱을 통해 결과 확인)-->
+
+  <body>
+    <h1>선택자</h1>
+    <div class="element-selector">
+      <h2 class="element-selector-heading">요소 선택자</h2>
+      <p class="element-selector-brief">
+        요소 선택자는 <a href="#">html</a> 명령 태그를 사용하여 선택하는
+        방법입니다.
+      </p>
+      <p class="pink">
+        요소 선택자는 <a href="#">html</a> 명령 태그를 사용하여 선택하는
+        방법입니다.
+      </p>
+
+
+
+    <div class="element-selector">
+      <h2 class="element-selector-heading">요소 선택자</h2>
+      <p>
+        요소 선택자는 <a href="#">html</a> 명령 태그를 사용하여 선택하는
+        방법입니다.
+      </p>
+      <p>
+        요소 선택자는 <a href="#">html</a> 명령 태그를 사용하여 선택하는
+        방법입니다.
+      </p>
+    </div>
+  </body>
+</html>

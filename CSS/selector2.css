@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/* 요소 선택자 */
+p.note{
+  background-color: yellow !important;
+}
+
+p{background-color: lime;
+  color: green;
+}
+
+body{color: red;}
+/* 클래스 선택자 */
+/* .note {
+  background-color: pink;
+} */
+
+/* 아이디 선택자 */
+ #brief {
+  background-color: skyblue;
+} 
