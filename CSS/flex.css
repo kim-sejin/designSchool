@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* 노멀 플로우는 기본적으로 세로배치.
+하지만 플렉스배치는 가로배치.
+div로 wrap해서 할거야
+h1이나 p같은 경우에는 기본적으로 설정된 마진값이 있어서 불편하니 div하자
+*/
+
+.wrapper{
+  background: yellow;
+
+  height: 200px;
+/* box1234 에 hieght를 설정하지 않으면 네 컨텐츠가 모두 상위 태그인 래퍼를 따라 200px로 설정됨. */
+
+  border: 10px solid black;
+  display: flex;
+  /* display: flex = 가로로 바로 나열하기
+  아래 box1234 에서 width를 조정해서 균일하게 알아서 나눠줌 */
+  flex-wrap: wrap;
+  flex-direction: row; 
+  /* direction = column 세로/ row가로 */
+  justify-content: space-between;
+  /*  개체 간 공간 / 개체 밖에도 공간  / 센터 / 끄트머리 - space-between / space-evenely / center / flex-end 
+  space-around*/
+  align-items: flex-end;
+
+  /* center / flex-end */
+
+
+  /* flex = (구) float */
+/* 3개 박스 레이아웃 중, 왼쪽 1/2, 오른쪽 1/2를 1/2로 나누는 레잉아웃 2:1:1
+세로로 긴 것 2, 가로로 긴 것 1(2개로 가르고 display mode변경. */
+
+}
+
+.box1, .box2, .box3, .box4{
+width: 250px ;
+height: 100px;
+
+}
+
+.box1{
+  background: rgba(255,0,0,.5);
+  order: 1;
+}
+
+.box2{
+  background: rgba(0,255,0,.5);
+  align-self: center;
+  /* 개별동작되는 명령어 존재 */
+}
+
+.box3{
+  background: rgba(0,0,255,.5);
+  align-self: flex-end;
+}
+
+.box4{
+  background: rgba(255,0,255,.5);
+  order: -1;
+  /* 본래 모두 순서는 0번이 디폴트 */
+
+  /* flex box game site
+  https://flexboxfroggy.com/ */
+}
