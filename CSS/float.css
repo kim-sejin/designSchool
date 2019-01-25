@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+.wrapper {
+  background: pink;
+  border: solid 10px black;
+  /* overflow: hidden; */
+  /* 넘치는지 아닌지 확인. 박스와 인라인 텍스트의 겹침을 방지
+기본적으로 텍스트와 그림 간 간략한 레이아웃을 구성하기 위해 탄생함 */
+}
+
+
+
+.clearfix::after {
+  content: "";
+  background: teal;
+  color: #fff;
+  display: block;
+  clear: both;
+  /* //강제로 마진을 가짜로 추가하는 것. 박스5 라는 텍스트를 지우면, 마지는 생기지만 텍스트는 안 뜸. 
+  대신 teal 색은 나오지 않고 .box중 가장 큰 놈과 높이를 같이함.
+   */
+}
+
+
+
+/* 
+.wrapper::after {
+  content: "";
+  background: teal;
+  color: #fff;
+  display: block;
+  clear: both;
+  //강제로 마진을 가짜로 추가하는 것. 박스5 라는 텍스트를 지우면, 마지는 생기지만 텍스트는 안 뜸. 
+  대신 teal 색은 나오지 않고 .box중 가장 큰 놈과 높이를 같이함.
+  
+  컨텐트, 미디어, 클리어가 삼위일체되어야 함.//
+}
+.wrapper::before는 요소들의 앞 */
+
+
+
+
+
+.wrapper2 {
+  background: lime;
+  /* wrapper에서 overflow를 해제하면 문제가 생길겨 */
+
+  /* clear: both; */
+  /* overflow를 하지 않아도 clear both하면 겹치지 않음. 강제로 마진을 추가 
+  여기서 top margin을 주면, wrapper에서 얼마나 떨어져야하는지 알아야 함. */
+}
+
+
+
+
+
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  height: 200px;
+  width: 25%;
+  /* .wrapper의 height를 정해주지 않았기 때문에 현재는 box1234의 크기만큼 나오고 있음. 즉, .wrapper의 height는 autO. */
+}
+
+.box1 {
+  background: rgba(255, 0, 0, 0.5);
+  float: left;
+/* 
+  box2의 박스 2 글자가 밀림 
+  height: 100px; */
+}
+
+.box2 {
+  background: rgba(0, 255, 0, 0.5);
+
+  float: right;
+}
+
+.box3 {
+  background: rgba(0, 0, 255, 0.5);
+  float: right;
+
+}
+
+.box4 {
+  background: rgba(255, 0, 255, 0.5);
+  float: left;
+
+}
