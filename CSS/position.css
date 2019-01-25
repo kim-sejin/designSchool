@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+
+h1{
+background: pink;
+  box-shadow: 5px 5px .2 .4 black;
+  /* 노멀 플로우 기준으로, 진짜 쉐도우 inset/outset, x, y, blur, spread, color */
+}
+
+
+.shadow{
+
+  background: black;
+}
+
+
+h2{
+
+position: relative;
+/* relative - push/pop 같은 것? 
+쉐도우 효과를 가라로 줄 때 사용, 구버전 호환용. */
+
+background: yellow;
+
+/* offset 지정하기 */
+top: -5px;
+left: -5px;
+}
+
+.parent{
+  position: relative;
+background: orange;
+height: 300px;
+width: 500px;
+border: solid 1px;
+}
+
+h3{
+
+  background: lime;
+
+   /* 포지션 앱솔루트 - 무조건 블럭이 됨. 글자 크기에 맞게 조절됨.
+  쉽게 말하면, 하나의 레이어가 된 것
+  고유 영역이 확보되지 않은 듯해 보이게 됨. */
+  position: absolute;
+ 
+/* 이번엔 내려가지 않고 올라감. - 실은 부모(상위 요소)인 body를 기준으로 움직인 거야. 
+  static이 아닌 요소를 만날때까지 상위로 찾아감. static 적용 안 됨.*/
+/* 바텀 / 라이트 변화를 주면, 결국  움직이는 건 상위 요소를 기준으로 움직이게 됨.
+현재는 parent의 범위 내에서 움직이고 있음. */
+bottom: 0px;
+ right: 0px;
+ top: 0px;
+ left:0px;
+
+ margin: auto;
+ width: 200px;
+ height: 150px;
+
+
+}
+
+h4{
+  background: aqua;
+  /* 뷰포트 기준으로 고정하기. fab버튼 같은 것 
+  top으로 돌아가기 버튼같은거지. 뷰포트 기준으로 fix임. 틀 고정도 이렇게 할 수 있겠지?*/
+  position:fixed; 
+  bottom:50px;
+  right: 50px;
+
+
+
+}
+
+/* 플렉스, 플로트, 포지션 */
