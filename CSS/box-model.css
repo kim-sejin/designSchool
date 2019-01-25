@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+.box1{
+background-color: yellow;
+width: 500px;
+height: 100px;
+border:10px solid black;
+
+padding: 20px;
+margin: 50px auto; 
+/*  마진은 등간격으로 유지할 때 가장 많이 사용함 */
+/* 50px 0 0 auto (우측정렬같은 트릭, 마진에서만 가능) */
+/* 레이아웃을 할 때 가장 중요한 요소임. */
+}
+
+.box2{
+  box-sizing: border-box;
+  /* border box로 설정할 경우, border&padding이 포함된 상태로 width/height가 만들어짐 */
+  /* 모바일 환경 시 다양한 스크린 크기에 대응하기 쉽게 하는 기능 */
+  background-color: pink;
+  width: 500px;
+  height: 100px;
+  border:5px solid black;
+  
+  padding: 20px;
+  margin: 70px auto; 
+}
+
+
+/* " * " 와일드카드. - 전체 선택자
+ *{box-sizing: border-box;
+  }   전체 박스 사이징이 보더박스로 변경됨  */
